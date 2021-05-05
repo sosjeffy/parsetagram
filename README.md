@@ -25,4 +25,4 @@ Here's a walkthrough of implemented user stories:
 
 ![Demo File](https://github.com/sosjeffy/parsetagram/blob/main/walkthrough1.gif)
 
-![Demo File](https://github.com/sosjeffy/parsetagram/blob/main/walkthrough1.gif)
+![Demo File](https://github.com/sosjeffy/parsetagram/blob/main/walkthrough2.gif)
