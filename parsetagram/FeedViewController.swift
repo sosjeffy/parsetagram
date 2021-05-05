@@ -10,6 +10,7 @@ import Parse
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     var posts = [PFObject]()
+    var queryLimit = 50
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +28,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.limit = self.queryLimit
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {
                 self.posts = posts!
@@ -41,7 +42,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func refreshPosts(_ refreshControl: UIRefreshControl) {
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.limit = self.queryLimit
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {
                 self.posts = posts!
