@@ -5,6 +5,7 @@ target 'parsetagram' do
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'Parse'
   pod 'AlamofireImage'
+  pod 'MessageInputBar'
   use_frameworks!
 
   # Pods for parsetagram
